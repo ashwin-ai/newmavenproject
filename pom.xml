@@ -14,7 +14,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         
         <!-- SonarQube properties -->
-        <sonar.host.url>http://35.154.40.77:9000/</sonar.host.url>
+        <sonar.host.url>http://65.1.133.239:9000/</sonar.host.url>
         <sonar.login>squ_f1ff0e9daa23abcfc501b74ccb836c8e367f3890</sonar.login>
         <sonar.projectKey>com.example:batch-app</sonar.projectKey>
     </properties>
@@ -22,12 +22,12 @@
     <repositories>
         <!-- Updated Nexus Repositories -->
         <repository>
-            <id>axis-bank</id>
-            <url>http://65.2.3.176:8081/repository/axis-bank/</url>
+            <id>nexus</id>
+            <url>http://13.201.190.130:8081/repository/axis-bank/</url>
         </repository>
         <repository>
-            <id>axis-bank-release</id>
-            <url>http://65.2.3.176:8081/repository/axis-bank-release/</url>
+            <id>nexus</id>
+            <url>http://13.201.190.130:8081/repository/axis-bank-release/</url>
         </repository>
     </repositories>
 
