@@ -21,10 +21,10 @@
 
     <repositories>
         <!-- Updated Nexus Repositories -->
-        <snapshotRepository>
+        <SnapshotRepository>
             <id>nexus</id>
             <url>http://13.201.190.130:8081/repository/axis-bank/</url>
-        </snapshotRepository>
+        </SnapshotRepository>
         <repository>
             <id>nexus</id>
             <url>http://13.201.190.130:8081/repository/axis-bank-release/</url>
