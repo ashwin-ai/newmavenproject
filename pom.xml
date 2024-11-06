@@ -19,17 +19,22 @@
         <sonar.projectKey>com.example:batch-app</sonar.projectKey>
     </properties>
 
-    <repositories>
-        <!-- Updated Nexus Repositories -->
-        <SnapshotRepository>
-            <id>nexus</id>
-            <url>http://13.201.190.130:8081/repository/axis-bank/</url>
-        </SnapshotRepository>
-        <repository>
-            <id>nexus</id>
-            <url>http://13.201.190.130:8081/repository/axis-bank-release/</url>
-        </repository>
-    </repositories>
+   <repositories>
+    <!-- Nexus Release Repository -->
+    <repository>
+        <id>nexus</id>
+        <url>http://13.201.190.130:8081/repository/axis-bank-release/</url>
+    </repository>
+</repositories>
+
+<distributionManagement>
+    <!-- Nexus Snapshot Repository -->
+    <snapshotRepository>
+        <id>nexus</id>
+        <url>http://13.201.190.130:8081/repository/axis-bank/</url>
+    </snapshotRepository>
+</distributionManagement>
+
 
     <dependencies>
         <!-- JUnit for testing -->
