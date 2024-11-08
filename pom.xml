@@ -23,7 +23,7 @@
     <!-- Nexus Release Repository -->
     <repository>
         <id>nexus</id>
-        <url>http://13.201.190.130:8081/repository/axis-bank-release/</url>
+        <url>http://13.127.106.43:8081/repository/axis-bank/</url>
     </repository>
 </repositories>
 
@@ -31,7 +31,7 @@
     <!-- Nexus Snapshot Repository -->
     <snapshotRepository>
         <id>nexus</id>
-        <url>http://13.201.190.130:8081/repository/axis-bank/</url>
+        <url>http://13.127.106.43:8081/repository/axis-bank/</url>
     </snapshotRepository>
 </distributionManagement>
 
