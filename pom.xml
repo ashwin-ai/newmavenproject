@@ -14,7 +14,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         
         <!-- SonarQube properties -->
-        <sonar.host.url>http://http://http://localhost:9000//</sonar.host.url>
+        <sonar.host.url>//http://localhost:9000//</sonar.host.url>
         <sonar.login>squ_cf791d670afc97e03fa54d3742342290df59a4eb</sonar.login>
         <sonar.projectKey>com.example:batch-app</sonar.projectKey>
     </properties>
