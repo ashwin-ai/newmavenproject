@@ -22,16 +22,16 @@
    <repositories>
     <!-- Nexus Release Repository -->
     <repository>
-        <id>nexus</id>
-        <url>http://13.127.106.43:8081/repository/axis-bank/</url>
+        <id>nexusserver1</id>
+	<url>http://192.168.0.3:8090/repository/nexusserver1/</url>
     </repository>
 </repositories>
 
 <distributionManagement>
     <!-- Nexus Snapshot Repository -->
     <snapshotRepository>
-        <id>nexus</id>
-        <url>http://13.127.106.43:8081/repository/axis-bank/</url>
+        <id>nexusserver</id>
+	<url>http://192.168.0.3:8090/repository/nexusserver/</url>
     </snapshotRepository>
 </distributionManagement>
 
