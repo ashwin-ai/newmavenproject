@@ -1,20 +1,30 @@
-# Use an official Python runtime as a parent image
-FROM python:3.8-slim
+# Use a Maven base image to build the application
+FROM maven:3.8.4-openjdk-11-slim as build
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the pom.xml and install dependencies
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+# Copy the source code into the container
+COPY src /app/src
+
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Now, create the runtime image with JDK 11
+FROM openjdk:11-jre-slim
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy the JAR file from the build stage
+COPY --from=build /app/target/*.jar /app/app.jar
 
-# Install any needed dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Expose the application port
+EXPOSE 8080
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Run the JAR file
+CMD ["java", "-jar", "/app/app.jar"]
