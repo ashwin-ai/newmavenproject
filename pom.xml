@@ -15,7 +15,7 @@
         
         <!-- SonarQube properties -->
         <sonar.host.url>http://172.26.48.1:9000</sonar.host.url>
-        <sonar.login>squ_cf791d670afc97e03fa54d3742342290df59a4eb</sonar.login>
+        <sonar.login>squ_64ec35cb084aadb41e56b1d99572fdfef139f7bc</sonar.login>
         <sonar.projectKey>com.example:batch-app</sonar.projectKey>
     </properties>
 
