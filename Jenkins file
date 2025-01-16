@@ -1,0 +1,29 @@
+pipeline script
+
+
+pipeline{
+
+agent any {
+
+stage('CheckOutCode'){
+steps{
+checkout([
+
+   }
+}
+
+stage('build'){
+steps{
+sh 'mvn clean package 
+
+   }
+}
+
+stage('Code quality'){
+   steps{
+    withSonarqubeEnv('Sonarqube')
+   sh "mvn sonar;sonar
+    }
+}
+
+}
